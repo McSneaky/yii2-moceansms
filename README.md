@@ -4,7 +4,7 @@ Mocean SMS sending for Yii2
 
 Based on mikk150/yii2-messentesms
 
-[![Build Status](https://travis-ci.org/mcsneaky/yii2-moceansms.svg?branch=master)](https://travis-ci.org/mcsneaky/yii2-moceansms) [![codecov](https://codecov.io/gh/mcsneaky/yii2-moceansms/branch/master/graph/badge.svg)](https://codecov.io/gh/mcsneaky/yii2-moceansms)
+[![Build Status](https://travis-ci.org/McSneaky/yii2-moceansms.svg?branch=master)](https://travis-ci.org/McSneaky/yii2-moceansms) [![codecov](https://codecov.io/gh/mcsneaky/yii2-moceansms/branch/master/graph/badge.svg)](https://codecov.io/gh/mcsneaky/yii2-moceansms)
 
 Usage
 -----
