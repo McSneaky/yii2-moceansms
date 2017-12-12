@@ -1,0 +1,31 @@
+{
+    "name": "mcsneaky/yii2-moceansms",
+    "description": "Yii2 Mocean SMS sending component",
+    "type": "yii2-extension",
+    "keywords": ["yii2", "extension", "sms", "moceansms", "mocean"],
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Margus Kevin Sünter",
+            "email": "kevin@synter.ee"
+        }
+    ],
+    "require": {
+        "mikk150/yii2-sms": "~1.0.0",
+        "yiisoft/yii2-httpclient": "~2.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.8.34"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "mcsneaky\\moceansms\\": "src/"
+        }
+    }
+}
