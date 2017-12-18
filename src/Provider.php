@@ -15,6 +15,7 @@ use mikk150\sms\BaseProvider;
 class Provider extends BaseProvider
 {
     const RESPONSE_OK_START = 'OK';
+    const RESPONSE_JSON = 'JSON';
 
     /** @var  string API username */
     public $username;
@@ -23,7 +24,7 @@ class Provider extends BaseProvider
     public $password;
 
     /** @var  string messente API URL */
-    public $apiUrl = 'https://rest-api.moceansms.com/rest/1/sms/';
+    public $apiUrl = 'https://rest-api.moceansms.com/rest/1';
 
     /**
      * @var string the default class name of the new message instances created by [[createMessage()]]
@@ -53,13 +54,14 @@ class Provider extends BaseProvider
     {
         // Create request to send
         $recipients = implode(',', (array) $message->getTo());
-        $request = $this->getClient()->post('send_sms', [
+        $request = $this->getClient()->post('sms', [
             'mocean-api-key' => $this->username,
             'mocean-api-secret' => $this->password,
             'mocean-from' => $message->getFrom(),
             'mocean-to' => $recipients,
             'mocean-text' => $message->getBody(),
-        ])->setFormat(Client::FORMAT_URLENCODED);
+            'mocean-resp-format' => self::RESPONSE_JSON
+        ])->setFormat(Client::FORMAT_JSON);
 
         // Send request
         $response = $this->getClient()->send($request);
