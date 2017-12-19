@@ -14,7 +14,6 @@ use mikk150\sms\BaseProvider;
  */
 class Provider extends BaseProvider
 {
-    const RESPONSE_OK_START = 'OK';
     const RESPONSE_JSON = 'JSON';
 
     /** @var  string API username */
@@ -61,7 +60,7 @@ class Provider extends BaseProvider
             'mocean-to' => $recipients,
             'mocean-text' => $message->getBody(),
             'mocean-resp-format' => self::RESPONSE_JSON
-        ])->setFormat(Client::FORMAT_JSON);
+        ])->setFormat(Client::FORMAT_URLENCODED);
 
         // Send request
         $response = $this->getClient()->send($request);
